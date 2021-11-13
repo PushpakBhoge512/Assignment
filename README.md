@@ -23,7 +23,7 @@ Visualiztion of first type (Same with not bounding box)
 Notice that the border of area and bbox have similar color but darker shade
 ![Visualiztion of first type](https://drive.google.com/uc?export=view&amp;id=1fb8BNtQa2Sde2LwcjuVLb8_oarcR17Jg)
 Visualiztion of Second type but without the confidende score
-![Visualiztion of Second type](https://drive.google.com/uc?export=view&amp;id=1IaDJLirO1gkKvMPYNgJVY1v0eM9wSvj0)
+![Visualiztion of Second type](https://drive.google.com/uc?export=view&amp;id=14YRKrlBWK--mm_5ct7abpPG3yGjKp3og)
 
 Note - How  much transparnt the polygon should be as per your taste but the parameter should be tweakble. also implementation using using low level function or from scratch will be prefered over high level one line implementation (e.g. detectron2 visualizer class)
 
