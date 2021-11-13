@@ -91,3 +91,4 @@ You can use any framework you want pyTorch(detectron2) and TensorFlow(object Det
 ### Criteria
 1. Structure and readbility of code
 2. What methods are used (using high level function will not be prefered)
+3. How well the code does on test cases
