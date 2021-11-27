@@ -56,7 +56,7 @@ You basically have to identify where are the damages and how percentage of damag
 3. For Task 1.1 The function should return two images (list) of the same shpe as input image one for each type of visualiztion. image can be pillow or numpy array as per your choice
 4. For Task1.2  it should return all the info as per discription How you want to return is upto you to decide. You can return a dictionary having all info  (you can decide the structure) or a list of strings like ["found x dents, y scratch on part xyz with percentage xx.xx", “found x dents, y scratch on part xyz with percentage xx.xx”]
 5. You need to import this functions from the util.py file in a notebook where you will call them on images and display the results by plotting.
-6. You have to put all the code in a folder with notbook named as demo.py put it in you github and share the repository link.
+6. You have to put all the code in a folder with notbook named as demo.py put it in you github and share the repository link. (zip files will not be entertained)
 
 ### Things to Note
 1. The submission should be through Github repo zip files will not be accepted
