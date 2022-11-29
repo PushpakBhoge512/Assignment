@@ -1,33 +1,6 @@
-#  Task 1.1 - Data Visualization
-Here you have to visualize the results on the images. In the folder "Data Visualization" there are two folder
-1. Images - Contains images named as 1.jpg, 2.jpg and so on
-2. Data - Contains metadata in form of JSON file named as 1.json, 2.json and so on
+:warning: Please go throught the submission guidelines, if not followed the submission will not be considered (P.S. no zip files)
 
-The naming is consistant between them for example 1.json is the metadata for image 1.jpg. In the json file you will find normalized xy  co-ordinates of polygons and class of the polygon., alongwith which side of car it is (passenger side, front side, driver side etc.) 
-
-For normalizing the co-ordinates following formula is used
-normalized_x = ( x / image_width ) * 100
-normalized_y = ( y / image_height ) * 100
-
-Hint --> masks and alpha blending
-### Following is the breakdown of the task:
-1. You have to go through json and figure out which fields to use and which field is for what.
-2. You will need to denormalized the polygon co-ordinates to use them to plot on image
-3. This polygons need to be plotted on image with transparancy and border highlighted with darker shade of same color (see an example of how it should look below)
-4. You have to do total 2 types of visualiztion
-	1.	Where only transparnt polygons are drawn
-	2.	where bounding boxes are drawn around them and class of polygon   displayed some on corner (can choose any corner)
-
-Examples
-Visualiztion of first type (Same with not bounding box)
-Notice that the border of area and bbox have similar color but darker shade
-![Visualiztion of first type](https://drive.google.com/uc?export=view&amp;id=1fb8BNtQa2Sde2LwcjuVLb8_oarcR17Jg)
-Visualiztion of Second type but without the confidende score
-![Visualiztion of Second type](https://drive.google.com/uc?export=view&amp;id=14YRKrlBWK--mm_5ct7abpPG3yGjKp3og)
-
-Note - How  much transparnt the polygon should be as per your taste but the parameter should be tweakble. also implementation using using low level function or from scratch will be prefered over high level one line implementation (e.g. detectron2 visualizer class)
-
-#  Task 1.2 - Damage Identification
+#  Task 1 - Damage Identification
 Here you have to identify the following things
 1. How many damages on the car-part
 2.  percentage of damage with respect to area of car part 
@@ -47,16 +20,9 @@ The naming is consistant between them for examplet **1-car-parts.json** contains
 	3. After you have to calculate area of the damages on every damaged car part.
 	4. Then you have to find the percentage of the carpart damaged (damaged_area / car_part_area) * 100
 	5. bonus point if you could identify the part i.e. front driver side wheel, front Bumper etc. (you will find whihc side of car it is in metadata json)
+3) your target is to do this in best optimized way
 
 You basically have to identify where are the damages and how percentage of damage on the car. Feel free to use your own judgement where you might have doubts.
-
-### Instructions related to how to submit code
-1. You have to create a util.py file in which you will put all of your helper functions.
-2. For Task 1.1 main funtion should have mandatory parameteres image_path, meta_data_json_path and opacity as optional parameter (this will control transparancy). You can add as many arguments as you want but they should be optional
-3. For Task 1.1 The function should return two images (list) of the same shpe as input image one for each type of visualiztion. image can be pillow or numpy array as per your choice
-4. For Task1.2  it should return all the info as per discription How you want to return is upto you to decide. You can return a dictionary having all info  (you can decide the structure) or a list of strings like ["found x dents, y scratch on part xyz with percentage xx.xx", “found x dents, y scratch on part xyz with percentage xx.xx”]
-5. You need to import this functions from the util.py file in a notebook where you will call them on images and display the results by plotting.
-6. You have to put all the code in a folder with notbook named as demo.py put it in you github and share the repository link. (zip files will not be entertained)
 
 ### Things to Note
 1. The submission should be through Github repo zip files will not be accepted
@@ -70,6 +36,7 @@ You can use any framework you want pyTorch and TensorFlow
 1. create a notebook on kaggle or colab (both fine)  it should have data preperation, training and evaluation code in it
 2. Provide the Class weights drive link will work (bouns point if you could directly download the class weights without requiring to manually set)
 3. Put the approach you have taken, augumentation policy you used, evaluation methods you have used and why etc in the notebook as markdown
+
 #  Task 2.2 - Damage Detection
 **Objectives :-** You have to train a bbox detection or instance segmentation or Semantic segmentation model to detect damages on cars. You can use following datasets. 
 https://www.kaggle.com/ruby09/damage-detection-dataset
@@ -82,13 +49,23 @@ You can use any framework you want pyTorch(detectron2) and TensorFlow(object Det
 4. Put which of the method you have used ( bbox detection or instance segmentation or Semantic segmentation and why ) in markdown cell
 
 ### Instructions related to how to submit code
-1. You have to use a notebook colab or kaggle any one is fine  you can either share the link directly or share it in github repo.
-2. The notebook should contain all the things asked in task discription
-3. You also need to put the experiment you have done and how you improved the model
-4. You are not expected to have 80-100% accuracy but good enough which can do good enough on val sets in the datasets 
+1. create a repository on your github account you can create new one or fork this one both is fine
+2. add your code in the format and structure you would like
+3. You have to do task1 mandatory and you can choose any one from task 2.1 and 2.2
+4. For Task1 it should return all the info as per discription How you want to return is upto you to decide. You can return a dictionary having all info  (you can decide the structure) or a list of strings like ["found x dents, y scratch on part xyz with percentage xx.xx", “found x dents, y scratch on part xyz with percentage xx.xx”]
+5. Do note that all the main code that you are writing should be *.py files 
+6. You can colab or kaggle for task 2, but you will have to commit that notebook into the forked repo, also you will have yo track all the training data and different expeiment that you have done
+7. a requirements.txt should be present in repo root directory
+8. lastly there should be a notebook in root (home) directory of repo named "demo.ipynb" it should contain all the report, summary of task 1 and 2
+9. for example for task 1 importing functions from *.py files and print out the results with any visulization and for example 2 it should have all the information you can add realted to task2 like code for running model on test set and report on different experiments their logs and why you chose the model
+10. remember 'demo.ipynb' is only for demo all the major logic should be in *.py files and all the outputs should be cached in notebook they should not be cleared
+11. share the public github url of your repository
 
 
-### Criteria
-1. Structure and readbility of code
-2. What methods are used (using high level function will not be prefered)
-3. How well the code does on test cases
+### Criteria of evaluation
+1. Structure, redability of the project and code
+2. does the code run out of the box (like just by doing `pip install -r requirements.txt`)
+3. how the dependencies are handled
+4. choice of model, usage of different training stratagies and understanding of concept
+4. How well the core python code is written
+5. How well the code does on test cases
